@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Puzzle</title>
+    <link rel="icon" href="images/fibonacci-favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="history" class="history">
+        <div class="close-button-outer">
+            <a href="javascript:void(0)" class="close-button" onclick="closeHist()">&times;</a>
+        </div>
+        <div class="history-outer">
+            <div class="history-text">
+                <h2>History</h2>
+            </div>
+            <div class="history-list">
+                <div class="history-item">
+                    <p>Example</p>
+                    <div class="mini-grid-container">
+                        <!-- The required number of mini-grid-container-item divs would be added here -->
+                    </div>
+                    <button id="revert-button">Revert</button> <!-- When this is clicked the full grid should revert back to the state on the mini grid. -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <button class="open-button" onclick="openHist()">&#9776;</button>
+        <div id="lights-out">
+            <div class="controls">
+                <div class="control-group">
+                    <label for="grid-size">Grid Size:</label>
+                    <input type="number" id="grid-size" min="3" max="10" value="5">
+                </div>
+                <div class="control-group">
+                    <label for="on-color">On Color:</label>
+                    <input type="color" id="on-color" value="#fdd452">
+                </div>
+                <div class="control-group">
+                    <button id="set-size-button">Set Size</button>
+                </div>
+            </div>
+            <div class="grid-container"></div>
+            <button id="reset-button">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

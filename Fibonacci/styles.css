@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }  
+
+#lights-out {
+    text-align: center;
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+}
+
+.control-group label {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.control-group input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.control-group input[type="color"] {
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.control-group button {
+    padding: 10px 20px;
+    background-color: #138cff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.4s;
+}
+
+.control-group button:hover {
+    background-color: #0056b3;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.grid-item {
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 2px;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+}
+
+.grid-item:active {
+    transform: scale(0.9);
+}
+
+.grid-item.on {
+    background-color: #fdd452;
+}
+
+#reset-button {
+    padding: 10px 20px;
+    background-color: #138cff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.4s;
+}
+
+#reset-button:hover {
+    background-color: #0056b3;
+}
+
+#revert-button {
+    padding: 10px 20px;
+    background-color: #138cff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.4s;
+}
+
+#revret-button:hover {
+    background-color: #0056b3;
+}
+
+.mini-grid-container {
+    display: grid;
+    gap: 5px;
+    margin-bottom: 5px;
+    justify-content: center;
+    grid-template-columns: repeat(5, 30px);
+}
+
+.mini-grid-container-item {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 1px;
+}
+
+.history {
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden; 
+    overflow-y: auto;
+    padding-top: 60px; 
+    transition: 0.5s;
+    padding-bottom: 60px;
+}
+
+.history .close-button {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+.history .close-button:hover {
+    transform: rotate(270deg);
+    color: #138cff;
+}
+
+.close-button-outer {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 72px;
+    margin-left: 50px;
+    transition: transform 0.4s;
+}
+
+.close-button-outer:hover {
+    transform: rotate(270deg);
+}
+
+.open-button {
+    position: fixed;
+    font-size: 70px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #bbb;
+    padding: 10px 15px;
+    border: none;
+    top: 0px;
+    left: 0px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.open-button:hover {
+    color: #444;
+    transform: scale(1.2);
+}
+
+.history-text {
+    color: #999;
+    font-family: 'Roboto', 'sans-serif';
+    text-align: center;
+
+}
+
+.history-list {
+    text-align: center;
+    color: #999;
+    padding: 0px 25px 100px 25px;
+    height: 90%
+}
+
+.history-item {
+    border-radius: 16px;
+    border-color: #666;
+    border: 2px solid;
+    background-color: #fff;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .history {padding-top: 15px;}
+}
